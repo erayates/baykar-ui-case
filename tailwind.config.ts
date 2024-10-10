@@ -19,6 +19,9 @@ const config: Config = {
         highlight: "var(--highlight)",
         accent: "var(--accent)",
         cream: "var(--cream)",
+        gold: "var(--gold)",
+        shadeBlue: "var(--shadeBlue)",
+        beige: "var(--beige)",
       },
     },
     screens: {
@@ -32,9 +35,10 @@ const config: Config = {
       sm: "16px",
       md: "18px",
       lg: "20px",
-      xl: "24px",
+      xl: "22px",
       "2xl": "32px",
       "3xl": "56px",
+      "4xl": "72px",
       "5xl": "96px",
     },
     container: {

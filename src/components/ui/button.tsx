@@ -2,7 +2,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "outlined" | "contained";
+  variant?: "outlined" | "contained" | "transparent";
   color?: "primary" | "secondary";
   size?: "small" | "medium" | "large";
 }
@@ -16,7 +16,7 @@ const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const baseStyles =
-    "font-semibold w-fit leading-6 rounded-lg rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2";
+    "font-semibold w-fit leading-6 rounded-lg rounded-md transition-colors duration-200 focus:outline-none";
 
   const variantStyles = {
     outlined: {
@@ -26,10 +26,12 @@ const Button: React.FC<ButtonProps> = ({
         "border-2 border-secondary text-secondary hover:bg-secondary hover:text-white focus:ring-secondary",
     },
     contained: {
-      primary:
-        "bg-primary text-white hover:bg-primary/70 focus:ring-primary/50",
-      secondary:
-        "bg-secondary text-white hover:bg-secondary/70 focus:ring-secondary/50",
+      primary: "bg-primary text-white focus:ring-primary/50",
+      secondary: "bg-secondary text-white focus:ring-secondary/50",
+    },
+    transparent: {
+      primary: "text-primary",
+      secondary: "text-secondary ",
     },
   };
 
@@ -48,7 +50,7 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <button className={buttonStyles} {...props}>
-      <span className="px-4 font-medium">{children}</span>
+      <span className="px-4 font-medium flex items-center">{children}</span>
     </button>
   );
 };

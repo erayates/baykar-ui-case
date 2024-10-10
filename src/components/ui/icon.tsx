@@ -18,6 +18,12 @@ import { ShoppingCart } from "../icons/shopping-cart";
 import { Twitter } from "../icons/twitter";
 import { World } from "../icons/world";
 import { Youtube } from "../icons/youtube";
+import { Trophy } from "../icons/trophy";
+import { Tunnel } from "../icons/tunnel";
+import { TV } from "../icons/tv";
+import { TrophyShape } from "../icons/trophy-shape";
+import { TunnelShape } from "../icons/tunnel-shape";
+import { TVShape } from "../icons/tv-shape";
 
 const Icons = {
   arrowLeft: ArrowLeft,
@@ -39,6 +45,12 @@ const Icons = {
   twitter: Twitter,
   world: World,
   youtube: Youtube,
+  trophy: Trophy,
+  tunnel: Tunnel,
+  tv: TV,
+  trophyShape: TrophyShape,
+  tunnelShape: TunnelShape,
+  tvShape: TVShape,
 };
 
 const Icon = ({
