@@ -17,6 +17,8 @@ const config: Config = {
         primary: "var(--primary)",
         secondary: "var(--secondary)",
         highlight: "var(--highlight)",
+        accent: "var(--accent)",
+        cream: "var(--cream)",
       },
     },
     screens: {
@@ -34,6 +36,12 @@ const config: Config = {
       "2xl": "32px",
       "3xl": "56px",
       "5xl": "96px",
+    },
+    container: {
+      padding: {
+        DEFAULT: "16px",
+        md: "80px",
+      },
     },
   },
   plugins: [],

@@ -8,6 +8,8 @@
   --primary: #0F172A;
   --secondary: #78350F;
   --highlight: #FDE68A;
+  --accent: #334155;
+  --cream: #E2E8F0;
 }
 
 @media (prefers-color-scheme: light) {
