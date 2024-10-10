@@ -5,7 +5,7 @@ import Image from "next/image";
 const Hero: React.FC = () => {
   return (
     <section id="hero" className="relative overflow-hidden">
-      <div className="relative inner-container text-center md:text-start">
+      <div className="relative inner-container text-center md:text-start max-w-screen-xl mx-auto">
         <div className="grid grid-cols-1 place-items-center md:place-items-start lg:grid-cols-[1.5fr_1fr] gap-20 my-12 md:my-20">
           <div className="space-y-8 flex flex-col justify-center mt-12">
             <h2 className="text-primary font-extrabold text-4xl leading-[110%]">

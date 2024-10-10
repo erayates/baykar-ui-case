@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "outlined" | "contained" | "transparent";
-  color?: "primary" | "secondary";
+  color?: "primary" | "secondary" | "white";
   size?: "small" | "medium" | "large";
 }
 
@@ -16,7 +16,7 @@ const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const baseStyles =
-    "font-semibold w-fit leading-6 rounded-lg rounded-md transition-colors duration-200 focus:outline-none";
+    "font-semibold w-fit leading-6 rounded-lg rounded-md h-fit transition-colors duration-200 focus:outline-none";
 
   const variantStyles = {
     outlined: {
@@ -24,14 +24,18 @@ const Button: React.FC<ButtonProps> = ({
         "border-2 border-primary text-primary hover:bg-primary focus:ring-primary",
       secondary:
         "border-2 border-secondary text-secondary hover:bg-secondary hover:text-white focus:ring-secondary",
+      white:
+        "border-2 border-white text-white hover:bg-white hover:text-primary",
     },
     contained: {
-      primary: "bg-primary text-white focus:ring-primary/50",
-      secondary: "bg-secondary text-white focus:ring-secondary/50",
+      primary: "bg-primary text-white focus:ring-primary",
+      secondary: "bg-secondary text-white focus:ring-secondary",
+      white: "bg-white text-primary focus:ring-primary",
     },
     transparent: {
       primary: "text-primary",
       secondary: "text-secondary ",
+      white: "text-white",
     },
   };
 

@@ -22,6 +22,15 @@ const config: Config = {
         gold: "var(--gold)",
         shadeBlue: "var(--shadeBlue)",
         beige: "var(--beige)",
+        pinkishRed: "var(--pinkish-red)",
+        deepCyan: "var(--deep-cyan)",
+        darkOrange: "var(--dark-orange)",
+        deepGreen: "var(--deep-green)",
+        amethyst: "var(--amethyst)",
+      },
+      boxShadow: {
+        card: "0px 25px 50px -12px rgba(255, 255, 255, 0.07)",
+        cardBottom: "0px 25px 50px -12px rgba(255, 255, 255, 0.25)",
       },
     },
     screens: {
@@ -36,6 +45,7 @@ const config: Config = {
       md: "18px",
       lg: "20px",
       xl: "22px",
+      sxl: "24px",
       "2xl": "32px",
       "3xl": "56px",
       "4xl": "72px",

@@ -13,6 +13,12 @@
   --gold: #FBBF24;
   --shadeBlue: #81b3c8;
   --beige: #FEF3C7;
+  --pinkish-red: #BE185D;
+  --deep-cyan: #0369A1;
+  --dark-orange: #B45309;
+  --deep-green: #15803D;
+  --amethyst: #A21CAF;
+
 
 }
 
@@ -38,7 +44,7 @@ body {
   }
 
   .rectangle {
-      clip-path: polygon(100% 16%, 0% 100%, 100% 100%);
+    clip-path: polygon(100% 2%, 12% 100%, 100% 100%);
   }
 
   .trapezoid {

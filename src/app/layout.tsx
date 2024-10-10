@@ -23,9 +23,7 @@ export default function RootLayout({
     <html lang="en" className="light">
       <body className={`${roboto.className} subpixel-antialiased`}>
         <Header />
-        <main className="max-w-screen-xl mx-auto w-full flex flex-col">
-          {children}
-        </main>
+        <main className="w-full flex flex-col">{children}</main>
         <Footer />
       </body>
     </html>
