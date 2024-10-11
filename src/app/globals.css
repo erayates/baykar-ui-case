@@ -46,7 +46,7 @@ body {
   }
 
   .trapezoid {
-    clip-path: polygon(0 53%, 100% 33%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 53%, 100% 31%, 100% 100%, 0% 100%);
   }
 
   .inner-container {
