@@ -14,7 +14,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   description,
 }) => {
   return (
-    <div className="shadow-card border border-primary rounded-[10px] bg-primary">
+    <div className="shadow-cardBottom border border-primary rounded-[10px] bg-primary">
       <div className="h-[220px] rounded-t-[10px] relative">
         <Image
           src={imageUrl}
@@ -23,10 +23,10 @@ const ProductCard: React.FC<ProductCardProps> = ({
           className="rounded-t-[10px] object-cover"
         />
       </div>
-      <div className="shadow-cardBottom text-white p-8 space-y-8 rounded-b-[10px]">
+      <div className="text-white p-8 space-y-8 rounded-b-[10px]">
         <div className="space-y-4">
           <h3 className="text-sxl font-bold">{title}</h3>
-          <p className="text-md">{description}</p>
+          <p className="text-md leading-[160%]">{description}</p>
         </div>
         <Button
           variant="outlined"

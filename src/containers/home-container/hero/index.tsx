@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
                 variant="outlined"
                 color="secondary"
                 size="medium"
-                className="w-full md:w-fit font-medium md:px-[28px]"
+                className="w-full md:w-fit font-medium"
               >
                 Sign up now
               </Button>

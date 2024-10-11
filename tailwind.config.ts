@@ -22,11 +22,6 @@ const config: Config = {
         gold: "var(--gold)",
         shadeBlue: "var(--shadeBlue)",
         beige: "var(--beige)",
-        pinkishRed: "var(--pinkish-red)",
-        deepCyan: "var(--deep-cyan)",
-        darkOrange: "var(--dark-orange)",
-        deepGreen: "var(--deep-green)",
-        amethyst: "var(--amethyst)",
       },
       boxShadow: {
         card: "0px 25px 50px -12px rgba(255, 255, 255, 0.07)",
