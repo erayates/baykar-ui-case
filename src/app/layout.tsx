@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="light">
-      <body className={`${roboto.className} subpixel-antialiased`}>
+      <body className={`${roboto.className} subpixel-antialiased bg-white md:bg-bodyGradient`}>
         <Header />
         <main className="w-full flex flex-col">{children}</main>
         <Footer />

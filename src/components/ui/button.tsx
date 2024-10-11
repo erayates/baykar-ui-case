@@ -16,7 +16,7 @@ const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const baseStyles =
-    "font-semibold w-fit leading-6 rounded-lg rounded-md transition-colors duration-200 focus:outline-none";
+    "font-semibold h-fit w-fit leading-6 rounded-lg rounded-md transition-colors duration-200 focus:outline-none";
 
   const variantStyles = {
     outlined: {
@@ -40,7 +40,7 @@ const Button: React.FC<ButtonProps> = ({
   };
 
   const sizeStyles = {
-    small: "p-3 text-sm",
+    small: "py-2 px-[28px] text-sm",
     medium: "px-4 py-2 text-md",
     large: "py-5 px-6 text-lg",
   };
@@ -54,7 +54,7 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <button className={buttonStyles} {...props}>
-      <span className="font-medium flex items-center">{children}</span>
+      {children}
     </button>
   );
 };

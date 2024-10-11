@@ -35,6 +35,9 @@ const config: Config = {
         macCard: " 0px 0px 15px 0px #00000012, 0px 25px 50px -12px #00000040",
         carousel: "0px 0px 6px 0px #00000012,0px 10px 15px -3px #0000001A",
       },
+      backgroundImage: {
+        bodyGradient: "linear-gradient(180deg, #FFFBEB 0%, #FFFFFF 89.63%)",
+      },
     },
     screens: {
       sm: "480px",
