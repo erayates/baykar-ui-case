@@ -21,7 +21,12 @@ const Carousel: React.FC<CarouselProps> = ({ currentIndex, items }) => {
   return (
     <div className="relative">
       <div className="overflow-x-auto md:overflow-hidden">
-        <div className="flex space-x-4 md:space-x-6 pb-4 transition-transform duration-300 ease-in-out">
+        <div
+          className="flex space-x-6 pb-4 transition-transform duration-300 ease-in-out"
+          style={{
+            transform: `translateX(-${(currentIndex * 100) / items.length}%)`,
+          }}
+        >
           {items.map((item) => (
             <CarouselCard
               key={item.id}

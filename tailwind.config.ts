@@ -50,6 +50,7 @@ const config: Config = {
       xl: "22px",
       sxl: "24px",
       "2xl": "32px",
+      "2.5xl": "48px",
       "3xl": "56px",
       "4xl": "72px",
       "5xl": "96px",
