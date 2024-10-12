@@ -71,9 +71,9 @@ const WhyJoinUs: React.FC = () => {
 const WhyJoinUsBackshapes: React.FC = () => {
   return (
     <React.Fragment>
-      <div className="absolute inset-0 z-0 -top-[14px] -left-[72px]">
+      <div className="absolute inset-0 z-0 -top-[14px] md:-top-[4px] -left-[72px]">
         <div className="bg-amber-700 w-[55px] h-[55px] md:w-[90px] md:h-[90px] left-12 md:left-14 top-6 rounded-[30px] absolute opacity-75"></div>
-        <div className="bg-amber-200 w-[411px] h-[134px] md:w-[666px] md:h-[218px] shadow-macCard -rotate-45 left-0 md:left-4 top-[70px] absolute">
+        <div className="bg-amber-200 w-[411px] h-[134px] md:w-[666px] md:h-[218px] shadow-macCard -rotate-45 left-0 md:left-2 top-[70px] absolute">
           <div className="bg-sky-700 w-[36px] h-[36px] md:w-[60px] md:h-[60px] rounded-[50px] absolute top-[60px] md:top-[114px] -translate-y-1/2 right-0 translate-x-1/2 opacity-75"></div>
         </div>
         <div className="bg-fuchsia-700 w-[45px] h-[45px] md:w-[74px] md:h-[74px] rounded-[30px] absolute -bottom-5 right-[56px] md:-bottom-11 md:right-16 opacity-75"></div>

@@ -1,44 +1,35 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Image from "next/image";
-import Avatar from "../avatar";
+import Avatar from "../ui/avatar";
+import { ITestimonial } from "@/types/testimonial";
 
 interface CarouselProps {
   currentIndex: number;
-  items: Array<{
-    id: number;
-    logo: string;
-    name: string;
-    content: string;
-    personName: string;
-    position: string;
-    avatar: string;
-  }>;
+  items: ITestimonial[];
 }
 
 const Carousel: React.FC<CarouselProps> = ({ currentIndex, items }) => {
   return (
-    <div className="relative">
-      <div className="overflow-x-auto md:overflow-hidden">
-        <div
-          className="flex space-x-6 pb-4 transition-transform duration-300 ease-in-out"
-          style={{
-            transform: `translateX(-${(currentIndex * 100) / items.length}%)`,
-          }}
-        >
-          {items.map((item) => (
-            <CarouselCard
-              key={item.id}
-              logo={item.logo}
-              name={item.name}
-              content={item.content}
-              personName={item.personName}
-              position={item.position}
-              avatar={item.avatar}
-            />
-          ))}
-        </div>
+    <div className="relative pt-4 md:pt-10 overflow-x-auto md:overflow-hidden">
+      <div
+        className="flex ml-4 space-x-4 md:space-x-6 pb-4 transition-transform duration-300 ease-in-out"
+        style={{
+          transform: `translateX(-${(currentIndex * 100) / items.length}%)`,
+        }}
+      >
+        {items.map((item) => (
+          <CarouselCard
+            key={item.id}
+            logo={item.logo}
+            name={item.name}
+            content={item.content}
+            personName={item.personName}
+            position={item.position}
+            avatar={item.avatar}
+          />
+        ))}
       </div>
     </div>
   );
@@ -68,7 +59,7 @@ const CarouselCard: React.FC<{
           <h2 className="font-semibold text-slate-600 text-sxl">{name}</h2>
         </div>
         <p className="flex-grow text-sm md:text-sxl text-black">{content}</p>
-        <div className="flex items-center space-x-4 pt-5">
+        <div className="flex items-center space-x-4 pt-4 md:pt-5">
           <Avatar src={avatar} name={personName} />
           <div>
             <p className="text-md font-normal">{personName}</p>
