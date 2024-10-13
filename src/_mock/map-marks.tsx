@@ -62,10 +62,22 @@ export const _mapMarks: IMapMark[] = [
       description: "Emma Simpson collected one pair of Cool Shoes.",
     },
   },
+
+  {
+    w: 16,
+    h: 16,
+    left: 886,
+    top: 288,
+    tooltip: {
+      image: "/assets/images/collection-world.jpeg",
+      description: "Emma Simpson collected one pair of Cool Shoes.",
+    },
+  },
+
   {
     w: 25,
     h: 25,
-    right: 440,
+    left: 584,
     bottom: 176,
     tooltip: {
       image: "/assets/images/collection-world.jpeg",
@@ -75,8 +87,19 @@ export const _mapMarks: IMapMark[] = [
   {
     w: 24,
     h: 24,
-    right: 240,
+    left: 785,
     bottom: 270,
+    tooltip: {
+      image: "/assets/images/collection-world.jpeg",
+      description: "Emma Simpson collected one pair of Cool Shoes.",
+    },
+  },
+
+  {
+    w: 24,
+    h: 24,
+    left: 910,
+    bottom: 121,
     tooltip: {
       image: "/assets/images/collection-world.jpeg",
       description: "Emma Simpson collected one pair of Cool Shoes.",

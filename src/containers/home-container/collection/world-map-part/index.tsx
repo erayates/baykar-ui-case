@@ -16,7 +16,7 @@ const WorldMapPart: React.FC = () => {
           <p className="text-2xl md:text-3xl leading-[110%]">Shoes Collected</p>
         </div>
 
-        <div className="ml-8 md:ml-0 overflow-x-hidden relative">
+        <div className="relative left-[350px] sm:left-0">
           <WorldMap opacity={0.5} />
 
           {_mapMarks.map((mark: IMapMark, idx) => (
@@ -52,7 +52,9 @@ const CircleMark: React.FC<IMapMark> = ({
 
   return (
     <div className={circleMarkClasses} style={style}>
-      <div className="relative hidden group-hover:block z-50 bg-white rounded-[10px] shadow-lg p-4 w-64 h-[200px] transform -translate-x-[calc(50%-16px)] -translate-y-[calc(100%+55px)] mb-2">
+      <div
+        className={`absolute left-1/2 hidden group-hover:block z-50 bg-white rounded-[10px] shadow-lg p-4 w-64 h-[200px] -translate-x-1/2 -translate-y-[calc(100%+55px)] mb-2`}
+      >
         <Image
           src={tooltip.image}
           alt={tooltip.description}
@@ -60,19 +62,12 @@ const CircleMark: React.FC<IMapMark> = ({
           className="object-cover p-2 rounded-[10px]"
         />
       </div>
-      {/* Tooltip Content */}
-      <div className="absolute z-30 transform top-0 -translate-x-[calc(50%-16px)] rounded-[5px] shadow-macCard -translate-y-full hidden px-4 pt-4 pb-2 group-hover:block bg-slate-200 w-[240px]">
+      <div
+        className={`absolute z-30 top-0 left-1/2 -translate-x-1/2 rounded-[5px] shadow-macCard -translate-y-full hidden px-4 pt-4 pb-2 group-hover:block bg-slate-200 w-[240px] after:absolute after:left-1/2 after:shadow-macCard after:bottom-[-8px] after:w-0 after:h-0 after:border-l-[8px] after:border-l-transparent after:border-r-[8px] after:border-r-transparent after:border-t-[8px] after:border-t-slate-200 after:-translate-x-1/2`}
+      >
         <p className="text-xs text-gray-600 leading-5 text-primary">
           {tooltip.description}
         </p>
-
-        {/* Tooltip Arrow */}
-        <div
-          className={cn(
-            "absolute left-1/2 bottom-[-8px] w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-slate-200",
-            ` -translate-x-[calc(50%+5px)] `
-          )}
-        ></div>
       </div>
     </div>
   );
