@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+<a id="readme-top"></a>
 
-## Getting Started
+<br />
+<div align="center">
+  <h1>Baykar UI Case</h1>
+  <a href="https://baykartech.com/en/">
+    <img src="https://github.com/user-attachments/assets/3e88749b-1afe-484d-ae75-a5ba76e4787b" alt="Logo" width="500px"/>
+  </a>
 
-First, run the development server:
+  <h3 align="center">UI Interface Application</h3>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+  <p align="center">
+    Demo Website
+    <br />
+    <a href="https://baykar-quiz-case.vercel.app/">View Demo</a>
+  </p>
+</div>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#-about-the-project">ℹ About The Project</a>
+      <ul>
+        <li><a href="#-built-with">🛠 Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#-screenshots--videos">🖼️ Screenshots & Videos</a>
+    </li>
+    <li>
+      <a href="#-getting-started">➡ Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#-contact">💌 Contact</a></li>
+  </ol>
+</details>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+<!-- ABOUT THE PROJECT -->
+### ⚠️ IMPORTANT NOTE ⚠️
 
-To learn more about Next.js, take a look at the following resources:
+In the description of the given case, Next.js was used because we only need to use Tailwindcss and Bootstrap and there are no other technology restrictions. Packages such as carousel, icon packages that will interfere with the interface or design were not used in the project. It was created only on a component basis.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ℹ About The Project
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is part of Baykar's recruitment process, aimed at evaluating frontend development skills through the creation of a responsive interface. The task involves coding a given design, ensuring it is implemented almost <b><i>100% pixel-perfect</i></b>. The focus is on achieving both precision and adaptability across different devices, as the interface must be fully responsive and visually accurate to the provided specifications.
 
-## Deploy on Vercel
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+### 🛠 Built With
+
+This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+
+* Next.js
+* Tailwindcss
+
+  
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- SCREENSHOTS & VIDEOS -->
+## 🖼️ Screenshots & Videos
+
+![image](https://github.com/user-attachments/assets/c892f96b-d949-4065-9034-b1c98905eba6)
+![image](https://github.com/user-attachments/assets/83c0710b-9190-448c-893e-b2a93775c28f)
+
+
+
+
+<!-- GETTING STARTED -->
+## ➡ Getting Started
+
+To get a local copy up and running, follow these steps:
+
+### Prerequisites
+
+- Node.js (v20.x or higher)
+
+### Installation
+
+1. **Clone the repo:**
+   ```bash
+   git clone https://github.com/erayates/baykar-ui-case.git
+   cd baykar-ui-case
+2. **Install dependencies:**
+   ```bash
+   cd app
+   npm install
+   ```
+
+3. **Start the app:**
+   ```bash
+   npm run dev
+   ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTACT -->
+## 💌 Contact
+
+Eray Ates - [@Twitter](https://x.com/eraayatees) - [@LinkedIn](https://www.linkedin.com/in/eraayatees/) - eray.ates@outlook.com
+
+Project Link: [https://github.com/erayates/baykar-quiz-case](https://github.com/erayates/baykar-quiz-case)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
