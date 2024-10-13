@@ -1,25 +1,63 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Avatar from "../ui/avatar";
 import { ITestimonial } from "@/types/testimonial";
+import { testimonials } from "@/_mock/testimonial";
+import Icon from "../ui/icon";
 
-interface CarouselProps {
-  currentIndex: number;
-  items: ITestimonial[];
-}
+const Carousel: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState<number>(2);
 
-const Carousel: React.FC<CarouselProps> = ({ currentIndex, items }) => {
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length
+    );
+  };
+
+  const [isMobile, setIsMobile] = useState<boolean>();
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <div className="relative pt-4 md:pt-10 overflow-x-auto md:overflow-hidden">
+    <div className="pt-4 md:pt-10 overflow-x-auto md:overflow-hidden px-4">
+      <div className="absolute hidden right-20 top-0 md:flex space-x-6">
+        <button
+          className="w-12 h-12 border-2 flex items-center justify-center border-secondary rounded-full hover:bg-secondary hover:text-white"
+          onClick={prevSlide}
+        >
+          <Icon name="arrowLeft" />
+        </button>
+
+        <button
+          className="w-12 h-12 border-2 flex items-center justify-center border-secondary rounded-full hover:bg-secondary hover:text-white"
+          onClick={nextSlide}
+        >
+          <Icon name="arrowRight" />
+        </button>
+      </div>
+
       <div
-        className="flex ml-4 space-x-4 md:space-x-6 pb-4 transition-transform duration-300 ease-in-out"
+        className="flex space-x-4 md:space-x-6 pb-4 transition-transform duration-300 ease-in-out"
         style={{
-          transform: `translateX(-${(currentIndex * 100) / items.length}%)`,
+          transform: isMobile
+            ? `translateX(-${currentIndex / testimonials.length}%)`
+            : `translateX(-${(currentIndex * 50) / testimonials.length}%)`,
         }}
       >
-        {items.map((item) => (
+        {testimonials.map((item: ITestimonial) => (
           <CarouselCard
             key={item.id}
             logo={item.logo}
@@ -46,7 +84,7 @@ const CarouselCard: React.FC<{
   avatar: string;
 }> = ({ logo, name, content, personName, position, avatar }) => {
   return (
-    <div className="md:w-1/3 max-w-[319px] md:max-w-[383px] flex-shrink-0">
+    <div className="w-full max-w-[319px] md:max-w-[383px] flex-shrink-0">
       <div className="bg-white p-6 md:p-8 space-y-2 md:space-y-4 h-full flex flex-col rounded-[20px] shadow-carousel">
         <div className="flex items-center py-5 space-x-2">
           <Image
