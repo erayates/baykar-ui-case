@@ -20,18 +20,20 @@ const MacCard: React.FC<MacCardProps> = ({
         cardClasses
       )}
     >
-      <div className="flex gap-[5px] p-4">
-        <div className="w-2 h-2 rounded-full bg-rose-600"></div>
-        <div className="w-2 h-2 rounded-full bg-amber-400"></div>
-        <div className="w-2 h-2 rounded-full bg-green-500"></div>
-      </div>
-      <div className={cn("relative", imageClasses)}>
-        <Image
-          src={imageSrc}
-          alt="Running Everywhere!"
-          className="rounded-b-[20px] pb-[6px] px-[6px] object-cover"
-          fill
-        />
+      <div className="z-20 bg-white rounded-[20px]">
+        <div className="flex gap-[5px] p-4">
+          <div className="w-2 h-2 rounded-full bg-rose-600"></div>
+          <div className="w-2 h-2 rounded-full bg-amber-400"></div>
+          <div className="w-2 h-2 rounded-full bg-green-500"></div>
+        </div>
+        <div className={cn("relative", imageClasses)}>
+          <Image
+            src={imageSrc}
+            alt="Running Everywhere!"
+            className="rounded-b-[20px] pb-[6px] px-[6px] object-cover"
+            fill
+          />
+        </div>
       </div>
 
       {children && children}

@@ -1,6 +1,6 @@
+import MacCard from "@/components/layout/mac-card";
 import Button from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
-import Image from "next/image";
 import React from "react";
 
 const WhyJoinUs: React.FC = () => {
@@ -39,28 +39,24 @@ const WhyJoinUs: React.FC = () => {
                 </span>
               </li>
             </ul>
-            <Button variant="outlined" color="secondary" size="medium" className="z-20 px-[28px]">
+            <Button
+              variant="outlined"
+              color="secondary"
+              size="medium"
+              className="z-20 px-[28px]"
+            >
               Sign up now
             </Button>
           </div>
 
-          <div className="mt-8 md:my-10 relative">
-            <div className="shadow-macCard rounded-[20px] relative z-20 bg-white h-full">
-              <div className="flex gap-[5px] p-4">
-                <div className="w-2 h-2 rounded-full bg-rose-600"></div>
-                <div className="w-2 h-2 rounded-full bg-amber-400"></div>
-                <div className="w-2 h-2 rounded-full bg-green-500"></div>
-              </div>
-              <div className="relative h-[193px] md:h-[309px]">
-                <Image
-                  src="/assets/images/why-join-us.jpeg"
-                  alt="Running Everywhere!"
-                  className="rounded-b-[20px] pb-[6px] px-[6px] object-cover"
-                  fill
-                />
-              </div>
-            </div>
-            <WhyJoinUsBackshapes />
+          <div className="mt-8 md:my-10 ">
+            <MacCard
+              imageSrc="/assets/images/why-join-us.jpeg"
+              imageClasses="h-[193px] md:h-[309px]"
+              cardClasses="w-full"
+            >
+              <WhyJoinUsBackshapes />
+            </MacCard>
           </div>
         </div>
       </div>
@@ -71,7 +67,7 @@ const WhyJoinUs: React.FC = () => {
 const WhyJoinUsBackshapes: React.FC = () => {
   return (
     <React.Fragment>
-      <div className="absolute inset-0 z-0 -top-[14px] md:-top-[4px] -left-[72px]">
+      <div className="absolute inset-0 -z-10 -top-[14px] md:-top-[4px] -left-[72px]">
         <div className="bg-amber-700 w-[55px] h-[55px] md:w-[90px] md:h-[90px] left-12 md:left-14 top-6 rounded-[30px] absolute opacity-75"></div>
         <div className="bg-amber-200 w-[411px] h-[134px] md:w-[666px] md:h-[218px] shadow-macCard -rotate-45 left-0 md:left-2 top-[70px] absolute">
           <div className="bg-sky-700 w-[36px] h-[36px] md:w-[60px] md:h-[60px] rounded-[50px] absolute top-[60px] md:top-[114px] -translate-y-1/2 right-0 translate-x-1/2 opacity-75"></div>
@@ -80,6 +76,9 @@ const WhyJoinUsBackshapes: React.FC = () => {
         <div className="bg-pink-700 w-[135px] h-[135px] md:w-[218px] md:h-[218px] rounded-[50px] absolute -bottom-[60px] -right-[55px] md:-bottom-[110px] md:-right-[118px] opacity-75"></div>
       </div>
       <div className="bg-green-700 w-[50px] h-[50px] md:w-[85px] md:h-[85px] rounded-[50px] absolute bottom-[-19px] left-[43px] md:bottom-[-37px] md:left-[70px] z-30 opacity-75"></div>
+      <div className="w-36 h-36 rounded-full bg-black/75 absolute left-1/2 top-[calc(50%+20px)] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+        <Icon name="play" className="text-white w-24 h-24" />
+      </div>
     </React.Fragment>
   );
 };
