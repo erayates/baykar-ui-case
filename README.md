@@ -71,10 +71,8 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <!-- SCREENSHOTS & VIDEOS -->
 ## 🖼️ Screenshots & Videos
 
-![image](https://github.com/user-attachments/assets/c892f96b-d949-4065-9034-b1c98905eba6)
-![image](https://github.com/user-attachments/assets/83c0710b-9190-448c-893e-b2a93775c28f)
-
-
+![image](https://github.com/user-attachments/assets/681a2853-93a2-4bc8-b47d-d966d76b4062)
+![image](https://github.com/user-attachments/assets/adf9d37d-b817-4d17-8f01-78881be7f651)
 
 
 <!-- GETTING STARTED -->
