@@ -7,6 +7,7 @@ import Icon from "@/components/ui/icon";
 import Image from "next/image";
 import React from "react";
 import WorldMapPart from "./world-map-part";
+import MacCard from "@/components/layout/mac-card";
 
 interface ICollectionItem {
   icon: React.ReactNode;
@@ -27,7 +28,7 @@ const Collection: React.FC = () => {
   return (
     <section id="collection" className="relative overflow-hidden">
       <div className="max-w-screen-xl mx-auto inner-container py-20">
-        <div className="space-y-8 md:space-y-20">
+        <div className="space-y-8 lg:space-y-20">
           <div className="space-y-8 text-center md:text-start">
             <h2 className="text-2xl md:text-3xl font-extrabold">
               Grow Your Collection
@@ -40,10 +41,13 @@ const Collection: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_3.68fr] gap-8 lg:gap-20 z-20">
-            <ul className="space-x-4 md:space-x-0 md:space-y-4 flex flex-1 flex-row md:flex-col overflow-auto md:overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_3.68fr] gap-8 lg:gap-20 z-20">
+            <ul className="space-x-4 md:space-x-0 md:space-y-4 flex flex-1 flex-row lg:flex-col overflow-auto lg:overflow-hidden">
               {collectionList.map((item: ICollectionItem, _idx: number) => (
-                <li className="flex flex-shrink-0 items-center space-x-4 p-4 hover:bg-white rounded-lg hover:shadow-lg group">
+                <li
+                  key={_idx}
+                  className="flex flex-shrink-0 items-center space-x-4 p-4 hover:bg-white rounded-lg hover:shadow-lg group"
+                >
                   <div className="w-6 h-6 flex items-center">{item.icon}</div>
                   <span className="font-medium text-lg">{item.title}</span>
                   <Icon
@@ -54,55 +58,34 @@ const Collection: React.FC = () => {
               ))}
             </ul>
 
-            <div className="relative">
-              <div className="shadow-macCard rounded-[20px] max-w-[295px] lg:max-w-[759px] relative z-10 bg-white h-full">
-                <div className="flex gap-[5px] p-4">
-                  <div className="w-2 h-2 rounded-full bg-rose-600"></div>
-                  <div className="w-2 h-2 rounded-full bg-amber-400"></div>
-                  <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                </div>
-                <div className="relative h-[160px] md:h-[410px]">
-                  <Image
-                    src="/assets/images/why-join-us.jpeg"
-                    alt="Running Everywhere!"
-                    className="rounded-b-[20px] pb-[6px] px-[6px] object-cover"
-                    fill
-                  />
-                </div>
-              </div>
+            <div className="relative w-full sm:mr-4 md:mr-0">
+              <MacCard
+                imageSrc="/assets/images/why-join-us.jpeg"
+                imageClasses="h-[160px] md:h-[410px]"
+              />
 
-              <div className="shadow-macCard absolute left-[36px] top-[57px] lg:left-[94px] lg:top-[105px] rounded-[20px] w-full max-w-[295px] lg:max-w-[759px] z-20 bg-white">
-                <div className="flex gap-[5px] p-4">
-                  <div className="w-2 h-2 rounded-full bg-rose-600"></div>
-                  <div className="w-2 h-2 rounded-full bg-amber-400"></div>
-                  <div className="w-2 h-2 rounded-full bg-green-500"></div>
+              <MacCard
+                imageSrc="/assets/images/product-2.jpeg"
+                imageClasses="h-[160px] md:h-[410px]"
+                cardClasses="absolute left-[36px] top-[57px] lg:left-[94px] lg:top-[105px]"
+              >
+                <div className="shadow-macCard absolute top-[64px] md:top-[97px] -right-[25px] md:-right-[91px] bg-white rounded-[10px] z-30">
+                  <div className="relative h-[105px] md:h-[286px] w-[94px] md:w-[256px]">
+                    <Image
+                      src="/assets/images/collection-3.jpeg"
+                      alt=""
+                      fill
+                      className="object-cover p-[6px] rounded-[10px]"
+                    />
+                  </div>
                 </div>
-                <div className="relative h-[193px] md:h-[410px]">
-                  <Image
-                    src="/assets/images/product-2.jpeg"
-                    alt="Running Everywhere!"
-                    className="rounded-b-[20px] pb-[6px] px-[6px] object-cover"
-                    fill
-                  />
-                </div>
-              </div>
-
-              <div className="shadow-macCard absolute top-[121px] lg:top-[202px] right-0 bg-white rounded-[10px] z-30">
-                <div className="relative h-[105px] lg:h-[286px] w-[94px] lg:w-[256px]">
-                  <Image
-                    src="/assets/images/collection-3.jpeg"
-                    alt=""
-                    fill
-                    className="object-cover p-[6px] rounded-[10px]"
-                  />
-                </div>
-              </div>
+              </MacCard>
             </div>
           </div>
         </div>
       </div>
-      <CollectionBackshapes />
 
+      <CollectionBackshapes />
       <WorldMapPart />
     </section>
   );

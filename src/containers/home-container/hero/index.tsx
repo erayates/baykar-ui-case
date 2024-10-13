@@ -29,9 +29,9 @@ const Hero: React.FC = () => {
                 variant="transparent"
                 color="secondary"
                 size="small"
-                className="w-full md:w-fit flex items-center font-medium"
+                className="w-full md:w-fit flex items-center justify-center md:justify-start font-medium"
               >
-                <Icon name="playCircle" className="inline-block mr-2" />{" "}
+                <Icon name="playCircle" className="inline-block mr-2 w-6 h-6" />
                 <span>Watch Demo</span>
               </Button>
             </div>
