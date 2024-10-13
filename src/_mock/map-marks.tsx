@@ -1,5 +1,6 @@
 import { IMapMark } from "@/types/map-mark";
 
+
 export const _mapMarks: IMapMark[] = [
   {
     w: 24,

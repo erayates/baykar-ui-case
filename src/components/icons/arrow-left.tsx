@@ -12,9 +12,9 @@ export function ArrowLeft({ ...props }) {
       <path
         d="M1 7L7 13M13.5 7H1H13.5ZM1 7L7 1L1 7Z"
         stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

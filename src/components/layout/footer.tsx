@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-primary w-full text-white">
       <div className="max-w-screen-xl mx-auto px-4 lg:px-20">
-        <div className="py-12 grid place-items-center lg:place-items-start grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="py-12 grid place-items-center lg:place-items-start grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8">
           {Object.entries(quickLinks).map(([category, items]) => (
             <div
               key={category}
@@ -79,9 +79,10 @@ const Footer: React.FC = () => {
               </ul>
             </div>
           ))}
+
           <div className="flex flex-col items-center lg:items-start text-md space-y-2 h-full">
             <h3 className="font-medium text-white py-3">Get the app</h3>
-            <div className="flex flex-col items-center lg:items-start justify-between space-y-2 h-full">
+            <div className="flex flex-col items-center lg:items-start justify-between  md:space-y-2 h-full">
               <div className="flex flex-col items-center lg:items-start">
                 <Link href="#">
                   <Image

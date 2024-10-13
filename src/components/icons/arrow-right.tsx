@@ -15,9 +15,9 @@ export function ArrowRight({ ...props }: React.SVGProps<SVGSVGElement>) {
       <path
         d="M13.5 7L7.5 13M1 7H13.5H1ZM13.5 7L7.5 1L13.5 7Z"
         stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

@@ -12,7 +12,7 @@ const HomeContainer: React.FC = () => {
       <Products />
       <WhyJoinUs />
       <Testimonial />
-      {/* <Collection /> */}
+      <Collection />
     </React.Fragment>
   );
 };

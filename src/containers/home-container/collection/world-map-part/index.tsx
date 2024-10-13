@@ -1,22 +1,22 @@
 "use client";
 
 import React from "react";
-import { _mapMarks, IMapMark } from "@/_mock/map-marks";
+import { _mapMarks } from "@/_mock/map-marks";
+import { IMapMark } from "@/types/map-mark";
 import { WorldMap } from "@/components/shapes/world-map";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 const WorldMapPart: React.FC = () => {
   return (
-    <div className="bg-amber-900">
-      <div className="max-w-screen-xl md:inner-container mx-auto flex items-center justify-center relative py-20">
+    <div className="bg-amber-900 py-[42px]">
+      <div className="max-w-screen-xl md:inner-container mx-auto flex items-center justify-center relative">
         <div className="font-extrabold text-amber-50 absolute z-30 text-center">
           <h2 className="text-2.5xl md:text-5xl leading-[110%]">11,658,467</h2>
-          <p className="text-2xl md:text-3xl leading-[110%]">
-            Shoes Collected
-          </p>
+          <p className="text-2xl md:text-3xl leading-[110%]">Shoes Collected</p>
         </div>
-        <div className="relative ml-8 md:0 overflow-x-hidden">
+
+        <div className="ml-8 md:ml-0 overflow-x-hidden relative">
           <WorldMap opacity={0.5} />
 
           {_mapMarks.map((mark: IMapMark, idx) => (
@@ -52,7 +52,7 @@ const CircleMark: React.FC<IMapMark> = ({
 
   return (
     <div className={circleMarkClasses} style={style}>
-      <div className="relative hidden group-hover:block z-40 bg-white rounded-[10px] shadow-lg p-4 w-64 h-[200px] transform -translate-x-[calc(50%-16px)] -translate-y-[calc(100%+55px)] mb-2">
+      <div className="relative hidden group-hover:block z-50 bg-white rounded-[10px] shadow-lg p-4 w-64 h-[200px] transform -translate-x-[calc(50%-16px)] -translate-y-[calc(100%+55px)] mb-2">
         <Image
           src={tooltip.image}
           alt={tooltip.description}
