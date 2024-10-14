@@ -13,7 +13,7 @@
   <p align="center">
     Demo Website
     <br />
-    <a href="https://baykar-quiz-case.vercel.app/">View Demo</a>
+    <a href="https://baykar-ui-case.vercel.app/">View Demo</a>
   </p>
 </div>
 
